@@ -941,37 +941,7 @@ to   { opacity: 0; }
 
 </head>
 <body>
-<!-- PASSWORD SCREEN -->
-<div id="password-screen">
-  <div class="pw-grid"></div>
-  <div class="pw-glow"></div>
-  <div class="pw-box">
-    <div class="pw-logo">E<span style="color:#c0000a;font-size:56px;vertical-align:middle;">⚡</span>H</div>
-    <div class="pw-brand">Encargo Hats</div>
-    <div class="pw-label">Enter Password</div>
-    <input type="password" class="pw-input" id="pw-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkPW()"/>
-    <button class="pw-btn" onclick="checkPW()">⚡ Enter</button>
-    <div class="pw-error" id="pw-error"></div>
-  </div>
-</div>
-<script>
-  function checkPW() {
-    const input = document.getElementById('pw-input');
-    const error = document.getElementById('pw-error');
-    if (input.value === 'Ruta2026') {
-      const screen = document.getElementById('password-screen');
-      screen.classList.add('hidden');
-      setTimeout(() => screen.remove(), 700);
-    } else {
-      error.textContent = 'Wrong password. Try again.';
-      input.classList.remove('shake');
-      void input.offsetWidth;
-      input.classList.add('shake');
-      input.value = '';
-      setTimeout(() => { error.textContent = ''; input.classList.remove('shake'); }, 2000);
-    }
-  }
-</script>
+
 
 <!-- NAV -->
 
